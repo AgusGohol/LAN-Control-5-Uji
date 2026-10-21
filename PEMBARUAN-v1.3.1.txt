@@ -1,0 +1,45 @@
+LAN CONTROL 5 v1.3.1 — PRIORITAS RESPONS KLIK DAN KEYBOARD
+
+PEMASANGAN
+1. Tutup LAN Control lama di komputer utama dan klien.
+2. Ekstrak paket ini ke folder aplikasi tetap yang digunakan sebelumnya.
+3. Jalankan klien (gunakan Jalankan-Klien-Admin.bat untuk izin administrator),
+   mulai berbagi lalu hubungkan dari komputer utama seperti sebelumnya.
+4. Tailscale, IP, kode koneksi, dan aturan firewall tetap digunakan.
+5. Perbarui utama DAN klien untuk mendapatkan seluruh perbaikan.
+6. Jika lokasi JAR berubah, aktifkan ulang startup dari lokasi terbaru.
+
+PERUBAHAN JALUR INPUT
+- Gerakan mouse yang belum dikirim diganti dengan posisi terbaru. Ratusan
+  gerakan lama tidak lagi menunda klik yang baru.
+- Posisi mouse sebelum klik/drag tetap dikirim berurutan agar target klik benar.
+- Klik, lepas tombol, dan keyboard mendapat prioritas di atas permintaan file.
+- Perubahan konfigurasi video yang berulang digabung, bukan diantrekan semua.
+- Robot pengambil gambar dipisahkan dari Robot pengirim input Windows.
+- Gambar pratinjau disiapkan ukurannya di thread pekerja, sehingga thread tampilan
+  tidak harus melakukan pengubahan ukuran berkualitas tinggi setiap kali menggambar.
+- Pada mode Asli/teks, saat mouse/keyboard digunakan, frame sementara memakai JPEG
+  kualitas tinggi untuk menekan beban kompresi. Sesudah input berhenti, PNG lossless
+  dipakai lagi secara otomatis (dengan batas ukuran paket yang sama seperti v1.3).
+- Interval sasaran pengiriman frame diperpendek saat ada interaksi. FPS nyata
+  mengikuti waktu tangkap, kompresi, jaringan, dan dekode; bukan jaminan FPS tetap.
+
+PENGATURAN UNTUK MENCOBA
+Mulai dengan kualitas Otomatis dan satu klien. Klik pratinjau/Perbesar dahulu
+agar keyboard fokus ke klien. Mode Asli/teks dan tampilan 1:1 tetap tersedia.
+Kontrol individual tetap hanya berdampak pada klien yang ditampilkan.
+
+BATAS
+Transfer file yang sedang dikirim tidak bisa dipotong di tengah paket. Operasi
+file klien yang lama masih bisa menunda pembacaan perintah pada sesi yang sama;
+hindari transfer/operasi folder besar bersamaan saat menguji respons kontrol.
+Latensi jaringan dan respons Windows/aplikasi klien masih memengaruhi hasil.
+Akses layar UAC, lock/login Windows dan monitor tambahan belum tersedia.
+
+VALIDASI
+Kompilasi Java 17, protokol terenkripsi, transfer file, kualitas gambar, serta
+pengujian input prioritas lulus. Uji 100.000 gerakan mengonfirmasi satu posisi
+terbaru, urutan klik/drag/keyboard, dan prioritas di atas permintaan file.
+Urutan input juga diperiksa melalui socket terenkripsi. Tata letak tetap diuji
+melalui render tanpa desktop. Pengujian ini tidak mengukur latensi pada Windows
+milik pengguna; coba langsung sebelum menghubungkan keempat klien.

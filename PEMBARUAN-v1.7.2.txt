@@ -1,0 +1,26 @@
+LAN CONTROL 5 v1.7.2 - IKON APLIKASI DAN PINTASAN WINDOWS
+
+IKON BARU
+- Komputer utama: logo kotak biru dengan dua monitor.
+- Klien (biasa maupun Administrator): logo dua monitor dengan kursor.
+Ikon tampil di judul jendela, taskbar, Alt+Tab, pintasan Desktop, menu Start,
+dan pintasan startup otomatis klien.
+
+PINTASAN OTOMATIS
+- Saat pertama kali dibuka setelah pembaruan ini, aplikasi membuat pintasan
+  sendiri (sekali saja per akun Windows):
+    Komputer utama -> "LAN Control 5 - Utama" di Desktop dan menu Start.
+    Klien          -> "LAN Control 5 - Klien" di Desktop dan menu Start.
+      Klien yang sedang berjalan sebagai Administrator mendapat pintasan
+      yang meminta izin Administrator (UAC) saat dibuka.
+- Pintasan yang Anda hapus tidak dibuat ulang. Untuk membuatnya lagi,
+  jalankan Buat-Pintasan.bat lalu pilih 1 (Utama), 2 (Klien), atau
+  3 (Klien Administrator).
+- File ikon disimpan di folder ikon\ di samping aplikasi. Jangan dihapus;
+  pembaruan berikutnya otomatis memperbarui ikon pada pintasan yang ada.
+- Tidak ada file EXE: aplikasi tetap dijalankan Java melalui pintasan,
+  sehingga tidak dicurigai antivirus.
+
+CATATAN
+Windows kadang menyimpan ikon lama di cache. Jika pintasan masih terlihat
+lama, tunggu sebentar atau keluar-masuk akun Windows.

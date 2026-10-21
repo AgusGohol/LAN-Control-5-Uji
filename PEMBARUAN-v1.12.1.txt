@@ -1,0 +1,11 @@
+LAN CONTROL 5 v1.12.1 - PESAN ERROR LEBIH JELAS DI KLIEN
+
+- Saat "Ingat kode" atau "Buka otomatis" gagal diatur, pesan di klien kini
+  menyebut alasan asli dari Windows (misalnya "Access is denied" atau
+  "running scripts is disabled"), bukan lagi pesan umum. Jadi penyebabnya
+  langsung terlihat dan mudah diperbaiki.
+- Penyimpanan kode (DPAPI) tetap menyembunyikan detail errornya, karena
+  perintah itu membawa kode rahasia. Hanya operasi pintasan/tugas (yang tidak
+  membawa kode) yang menampilkan alasan Windows.
+
+Tidak ada perubahan fitur lain.

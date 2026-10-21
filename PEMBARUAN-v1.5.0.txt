@@ -1,0 +1,99 @@
+LAN CONTROL 5 v1.5.0 - PERBAIKAN BUG, SAMBUNG ULANG, TOMBOL KHUSUS, FILE MANAGER
+
+CARA MEMPERBARUI
+1. Tutup aplikasi utama dan klien versi lama.
+2. Ganti berkas di folder aplikasi YANG SAMA pada kelima komputer
+   (startup otomatis klien tetap mengarah ke lokasi JAR yang sama).
+3. Jalankan kembali seperti biasa. IP, port (45851), dan kode tidak berubah.
+Protokol tetap V5: utama v1.5.0 tetap dapat mengontrol klien v1.4.2 - v1.4.4,
+tetapi beberapa perbaikan (Ctrl+C lebih andal, pesan "klien sedang dipakai",
+tanggal file, transfer tidak memperlambat mouse) baru aktif bila klien juga
+diperbarui. Disarankan memperbarui semua komputer.
+
+PERBAIKAN BUG
+- Jendela Perbesar, Kontrol serentak, dan File & akses tetap berfungsi setelah
+  klien terputus lalu terhubung kembali. Sebelumnya jendela yang sudah terbuka
+  tetap mengirim ke koneksi lama sehingga mouse/keyboard tidak bereaksi.
+- Scroll touchpad laptop kini berfungsi. Gerakan halus touchpad dikumpulkan
+  menjadi langkah scroll; sebelumnya terkirim sebagai 0 sehingga tidak bergerak.
+- Ctrl+V tidak lagi menimpa clipboard klien dengan teks lama dari komputer utama.
+  Teks utama hanya dikirim jika berubah sejak salinan terakhir. Jadi menyalin
+  file/gambar di klien (Ctrl+C di Explorer) lalu Ctrl+V di klien kini menempel
+  file/gambar tersebut, bukan teks lama.
+- Ctrl+C pada file/gambar di klien tidak lagi memunculkan pesan galat; kartu klien
+  menampilkan keterangan singkat.
+- Ctrl+C lebih andal di aplikasi lambat (Word, browser): klien menunggu sampai
+  clipboard benar-benar berubah (maksimal 1,2 detik), bukan 0,22 detik tetap.
+- Transfer file dan daftar folder besar tidak lagi menahan mouse/keyboard.
+  Perintah file diproses di jalur terpisah pada klien.
+- Komputer utama kedua yang mencoba terhubung ke klien yang sedang dipakai kini
+  langsung mendapat pesan "Klien sedang dikontrol komputer utama lain", bukan
+  menunggu 15 detik lalu "batas waktu".
+- Kode koneksi salah kini dilaporkan dengan jelas: "Kode koneksi berbeda".
+- Pesan "Address already in use" diganti penjelasan: port 45851 sudah dipakai
+  karena klien lain sudah berjalan di komputer itu (misalnya dari startup).
+- Koneksi mati (Wi-Fi putus, utama crash) terdeteksi lebih cepat oleh klien
+  (10 detik) sehingga utama dapat menyambung ulang lebih cepat.
+- Kirim file tanpa folder tujuan sebelumnya bisa tersimpan di folder aplikasi
+  klien. Kini wajib membuka folder tujuan terlebih dahulu.
+- Tombol mouse tambahan (back/forward) tidak lagi menimbulkan galat.
+- Alamat 169.254.x.x (tidak bisa dipakai) tidak lagi ditampilkan di jendela klien.
+- Daftar folder lebih dari 5000 item kini mengambil 5000 item pertama sesuai
+  urutan nama, bukan acak.
+- Teks tab yang dipilih kini terbaca (sebelumnya putih di atas putih).
+
+FITUR BARU 1 - SIMPAN IP & SAMBUNG ULANG OTOMATIS
+- IP, nama komputer, kualitas, dan pilihan tampilan tersimpan otomatis dan
+  terisi kembali saat aplikasi utama dibuka.
+  Lokasi: %APPDATA%\LANControl5\controller.properties
+- Klik nama komputer (misalnya "Komputer 1") untuk mengganti nama: Kasir, Lab-02.
+- Ingat kode (opsional): kode disimpan terenkripsi Windows DPAPI untuk akun
+  Windows ini, tidak sebagai teks biasa. Jika Ingat kode dan Sambung ulang
+  otomatis aktif, semua klien yang memiliki IP langsung dihubungkan saat aplikasi
+  utama dibuka.
+- Hubungkan semua / Putus semua: satu klik untuk semua kartu yang memiliki IP.
+  Kegagalan ditampilkan pada kartu masing-masing, bukan jendela pesan berulang.
+- Sambung ulang otomatis (aktif bawaan): jika koneksi putus (Wi-Fi, klien
+  restart, klien menekan Hentikan lalu Mulai lagi), utama mencoba lagi dengan
+  jeda 3, 5, 7 ... hingga 15 detik. Status berwarna kuning menunjukkan hitungan.
+  Klik Putus untuk berhenti. Kode salah menghentikan percobaan.
+  Tekan Enter di kolom IP untuk menghubungkan kartu tersebut.
+
+FITUR BARU 2 - TOMBOL KHUSUS / PINTASAN
+Tombol Windows, Alt+Tab, dan Alt+F4 ditangkap oleh Windows komputer utama,
+sehingga tidak bisa diteruskan dari keyboard. Gunakan:
+- Tombol "Pintasan" pada kartu klien, atau
+- Tombol "Tombol khusus" pada jendela Perbesar / Kontrol serentak.
+Isi menu: Tombol Windows (Start), Win+D, Win+E, Win+R, Win+Shift+S, Alt+Tab,
+Alt+F4 (menutup jendela aktif DI KLIEN), Ctrl+Shift+Esc (Task Manager),
+Print Screen, dan Lepaskan semua tombol.
+Ctrl+Alt+Del tidak dapat dikirim: Windows melindunginya di layar aman.
+
+FITUR BARU 3 - FILE MANAGER LEBIH BAIK (File & akses)
+- Kolom Nama, Jenis, Ukuran (KB/MB/GB) dan tanggal Diubah. Klik judul kolom
+  untuk mengurutkan. Folder tampil di atas.
+- Pilih beberapa file dengan Ctrl/Shift+klik: Ambil file sekaligus ke satu
+  folder, atau Hapus sekaligus (dengan konfirmasi daftar nama).
+- Kirim file: pilih beberapa file sekaligus, atau TARIK file dari Windows
+  Explorer ke daftar file. File dikirim ke folder yang sedang dibuka.
+- Nama yang sudah ada tidak ditimpa: otomatis disimpan sebagai "nama (2).ext"
+  dan dilaporkan setelah selesai.
+- Bilah kemajuan dengan persen, ukuran, dan kecepatan; tombol Batal transfer.
+- Folder baru dan Ubah nama cukup menulis nama (alamat lengkap tetap bisa).
+- Enter di kolom alamat membuka folder; Enter di daftar membuka folder pilihan;
+  Backspace naik satu folder.
+- Mengirim/mengambil seluruh folder belum didukung; kompres menjadi ZIP dahulu.
+
+VALIDASI
+- Kompilasi Java 17 (--release 17); seluruh uji lama lolos.
+- Uji baru: sambung ulang otomatis dengan jendela yang sudah terbuka tetap
+  mengontrol sesi baru; penolakan BUSY dan kode salah; scroll touchpad;
+  urutan tombol khusus; keputusan Ctrl+V lokal/kirim; tunggu salinan lambat;
+  simpan/muat pengaturan UTF-8; format ukuran, nama unik, alamat Windows;
+  kompatibilitas daftar file klien lama.
+- Uji ujung ke ujung (klien + utama nyata di layar virtual Linux): pratinjau,
+  Perbesar, menu tombol khusus, kirim beberapa file + penamaan ulang otomatis,
+  klien berhenti/mulai lagi lalu utama tersambung ulang sendiri dan File & akses
+  tetap berfungsi.
+- Belum diuji langsung di Windows: tombol Windows/Alt+Tab via Robot, DPAPI
+  Ingat kode, tarik file dari Explorer, dan clipboard Windows. Uji satu klien dulu.

@@ -1,0 +1,29 @@
+LAN CONTROL 5 v1.12.8 - MODE ADMINISTRATOR BERFUNGSI DI PC YANG MEMBATASI POWERSHELL
+
+Setelah "Buka otomatis" biasa berhasil (klien terbuka & berbagi layar sendiri saat
+PC dinyalakan), muncul satu batasan: ketika di PC klien dijalankan aplikasi dengan
+"Run as administrator", komputer utama tidak bisa melihat/mengontrolnya - layar
+menjadi hitam dan klik tidak sampai.
+
+Sebabnya: klien terbuka sebagai pengguna biasa, sedangkan jendela "Run as
+administrator" muncul di desktop aman (secure desktop) Windows yang memang tidak
+bisa ditangkap atau diklik oleh program biasa. Agar komputer utama punya kontrol
+penuh (termasuk aplikasi administrator), klien harus sudah terbuka SEBAGAI
+ADMINISTRATOR sejak awal. Dengan begitu tidak ada lagi jendela UAC yang menghalangi.
+
+Opsi "dengan izin Administrator" membuat tugas terjadwal yang membuka klien dengan
+hak penuh saat login. Di versi lalu pembuatan tugas itu memakai PowerShell
+(Register-ScheduledTask), yang ikut diblokir di PC dengan PowerShell terbatas
+(Constrained Language Mode) - jadi mode Administrator tidak pernah aktif di sana.
+
+- Pembuatan/penghapusan/pengecekan tugas terjadwal kini memakai schtasks.exe
+  (alat bawaan Windows), bukan PowerShell. Tidak terpengaruh pembatasan PowerShell.
+- Tugas didefinisikan sebagai XML Task Scheduler: berjalan saat login pengguna ini,
+  dengan hak tertinggi (Administrator) dan tanpa menyimpan kata sandi.
+
+Cara memakai (sekali saja di tiap PC klien, perlu persetujuan UAC sekali):
+  1. Tutup aplikasi klien bila sedang terbuka.
+  2. Jalankan Jalankan-Klien-Admin.bat dan setujui UAC.
+  3. Centang "Buka otomatis saat PC dinyalakan" lalu "dengan izin Administrator".
+  4. Nyalakan ulang PC. Setelah login, klien terbuka sebagai Administrator dan
+     komputer utama memperoleh kontrol penuh, termasuk aplikasi "Run as administrator".

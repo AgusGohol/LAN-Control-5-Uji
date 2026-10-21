@@ -1,0 +1,27 @@
+LAN CONTROL 5 v1.4.1 - PERBAIKAN UKURAN LAYAR
+
+Perubahan:
+- Ukuran monitor klien dibaca kembali pada setiap tangkapan dan gerakan mouse.
+  Setelah resolusi berubah, Robot tangkapan dibuat ulang.
+- Tangkapan memakai varian resolusi tertinggi yang tersedia untuk layar HiDPI.
+- Mode Pas jendela/Regangkan mengikuti luas viewport tanpa menyisakan ukuran
+  tampilan lama. Ukuran asli 1:1 tetap dapat digulir.
+- Gambar cache selalu digambar sesuai ukuran target terbaru.
+- Ctrl+C/Ctrl+V tetap tersedia, sama dengan v1.4.0.
+
+Cara memperbarui:
+1. Tutup aplikasi utama dan semua klien.
+2. Ekstrak ZIP dan ganti berkas pada folder aplikasi yang sama, terutama
+   jika startup otomatis sudah aktif.
+3. Jalankan utama dan klien versi 1.4.1. Hubungkan ulang.
+4. Perbesar > Regangkan > Layar penuh.
+
+Versi ini kompatibel protokol V4 (1.4.0), tetapi perbaikan tangkapan layar
+memerlukan pembaruan pada klien juga.
+
+Pengujian otomatis lulus pada Linux/headless: protokol terenkripsi, file,
+kualitas video, input, clipboard, perubahan ukuran cache, viewport penuh,
+dan pemetaan klik. Perubahan resolusi/HiDPI Windows perlu diuji di komputer
+Windows pengguna. Jika area hitam tetap terlihat, kirim tangkapan layar
+langsung dari komputer klien beserta Pengaturan > Sistem > Tampilan
+(resolusi dan skala) untuk membedakan masalah tangkapan dan desktop sumber.

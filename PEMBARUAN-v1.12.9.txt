@@ -1,0 +1,13 @@
+LAN CONTROL 5 v1.12.9 - PERBAIKAN FORMAT XML TUGAS ADMINISTRATOR
+
+Lanjutan v1.12.8. Saat mencentang "dengan izin Administrator" muncul pesan:
+  "The task XML is malformed. (1,40)::ERROR: unable to switch the encoding"
+
+Sebabnya: schtasks.exe mensyaratkan berkas definisi tugas (XML) dalam format
+UTF-16 (dengan penanda BOM), sedangkan v1.12.8 menulisnya sebagai UTF-8.
+
+- Definisi tugas kini ditulis sebagai UTF-16 (LE) dengan BOM dan deklarasi
+  encoding="UTF-16", sesuai yang diminta schtasks.exe.
+
+Mode Administrator (klien terbuka sebagai Administrator saat login) kini bisa
+diaktifkan di PC yang membatasi PowerShell.

@@ -1,0 +1,7 @@
+LAN CONTROL 5 v1.10.1 - TAMBAHAN PINTASAN WIN+X
+
+- Ctrl + Alt + X  ->  Win + X di klien (menu power user: Device Manager,
+  Disk Management, Shutdown, dll.).
+
+Kombinasi lain tidak berubah. Daftar lengkap tetap ada di bawah jendela
+Perbesar dan di menu "Tombol khusus".

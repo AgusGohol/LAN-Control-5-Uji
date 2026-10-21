@@ -1,0 +1,68 @@
+LAN CONTROL 5 v1.3 — GAMBAR JERNIH, RESOLUSI OTOMATIS, UI BARU
+
+CARA MEMPERBARUI
+1. Hentikan berbagi dan tutup aplikasi LAN Control lama pada utama dan klien.
+2. Cadangkan folder aplikasi lama. Ekstrak paket terbaru ke folder aplikasi tetap.
+   Jika startup mengarah ke folder lama, gunakan lokasi itu untuk JAR terbaru,
+   atau aktifkan ulang startup dari lokasi baru.
+3. Gunakan versi 1.3 pada komputer utama DAN semua klien. Protokol gambar V3
+   memerlukan pasangan versi yang sama; versi 1.2 belum mendukung konfirmasi frame.
+4. Buka Jalankan-Klien-Admin.bat di klien, isi kode lalu mulai berbagi.
+5. Buka Jalankan-Utama.bat dan isi IP Tailscale/LAN serta kode koneksi yang sama.
+6. Biarkan Tailscale dan aturan firewall yang sudah berhasil tetap digunakan.
+   Aplikasi tidak mereset pengaturan Tailscale/firewall.
+
+EMPAT PILIHAN KUALITAS
+- Otomatis: resolusi aliran mengikuti ukuran pratinjau/jendela besar, termasuk
+  faktor skala tampilan. Gambar disampel hingga 1,25 kali ukuran viewport,
+  dibatasi resolusi asli dan maksimum 3840 x 2160. Proporsi tetap dipertahankan.
+  Jika waktu encode/kirim/decode/konfirmasi meningkat, resolusi otomatis turun
+  bertahap; kembali naik saat kondisi membaik.
+- HD 1080p: aliran maksimal 1920 x 1080, JPEG kualitas 95%.
+- Asli / teks: resolusi asli hingga 3840 x 2160. PNG lossless digunakan untuk
+  menjaga detail teks. Jika PNG melebihi batas paket 8 MiB, digunakan JPEG
+  berkualitas tinggi. Monitor beresolusi di bawah 4K tidak dinaikkan secara palsu.
+- Hemat data: maksimal 960 x 540, JPEG kualitas 78%.
+
+CARA MEMBACA TEKS DENGAN JELAS
+1. Klik Perbesar pada klien.
+2. Pilih Asli / teks.
+3. Centang Tampilan 1:1 agar piksel gambar tidak dikecilkan untuk memenuhi jendela.
+4. Gunakan bilah gulir untuk melihat bagian layar yang tidak muat.
+5. Layar penuh memaksimalkan jendela kontrol; klik ulang untuk ukuran biasa.
+
+MODE OTOMATIS
+- Membuka, menutup, dan mengubah ukuran jendela besar mengubah permintaan resolusi.
+- Pilihan di dashboard berlaku untuk semua klien. Pilihan dalam jendela besar
+  berlaku pada aliran komputer yang sedang ditampilkan.
+- Jendela besar dan kartu klien memakai aliran yang sama; ukuran terbesar yang
+  sedang ditampilkan menentukan permintaan resolusi.
+- Ini mengadaptasi RESOLUSI ALIRAN GAMBAR, bukan mengubah pengaturan resolusi
+  Windows pada monitor klien.
+- Hanya satu frame menunggu konfirmasi pada satu waktu, sehingga gambar tidak
+  mengantre panjang saat koneksi melambat. Kecepatan nyata bergantung pada
+  komputer, isi layar, dan koneksi langsung/relay Tailscale.
+- Mode asli membutuhkan bandwidth dan CPU lebih besar daripada mode hemat.
+- Resolusi yang diterima dan rata-rata fps terlihat di bawah pratinjau.
+
+TAMPILAN BARU
+- Warna gelap dengan aksen hijau toska, kartu membulat dan jarak yang konsisten.
+- Status online dan informasi resolusi lebih mudah dibaca.
+- Kolom IP serta kontrol koneksi dipisahkan dari judul kartu.
+- Jendela sempit menampilkan satu kolom yang dapat digulir.
+- Kolom kode klien berukuran normal, bukan kotak tinggi.
+- Tampilan pesan/dialog mengikuti warna teks agar terbaca.
+
+FITUR TETAP TERSEDIA
+Kontrol individual dan serentak; file/clipboard; startup login biasa/admin;
+peluncur izin administrator; koneksi terenkripsi. Tombol hentikan tetap terlihat.
+Kontrol pada pratinjau individual hanya dikirim ke klien tersebut.
+Layar UAC/secure desktop, login Windows, dan monitor tambahan belum didukung.
+
+VALIDASI
+Kompilasi Java 17; tes protokol terenkripsi dan transfer file; roundtrip frame
+adaptif melalui socket terenkripsi; tes pemulihan resolusi; PNG mempertahankan
+piksel sumber; rasio gambar dan pemetaan klik; render dashboard pada lebar
+1480 dan 900 piksel. Pengujian dilakukan pada Linux tanpa desktop Windows.
+Performa lima komputer, DPI Windows, UAC dan startup perlu dicoba di perangkat
+Windows asli. Pratinjau uji internal memakai layar contoh buatan, bukan data klien.

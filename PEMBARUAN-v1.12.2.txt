@@ -1,0 +1,11 @@
+LAN CONTROL 5 v1.12.2 - PESAN ERROR KLIEN BENAR-BENAR TERBACA
+
+- Perbaikan lanjutan dari v1.12.1. Sebelumnya pesan error di klien justru
+  menampilkan data "progress" PowerShell (teks CLIXML yang panjang, mis.
+  "Preparing modules for first use") yang menutupi alasan sebenarnya.
+- Sekarang progress itu dimatikan, dan jika ada error, pesannya diterjemahkan
+  jadi kalimat yang bisa dibaca (mis. "Access is denied" atau "running scripts
+  is disabled on this system").
+
+Jika "Ingat kode" atau "Buka otomatis" gagal, pesannya kini langsung
+menyebut penyebab yang bisa ditindaklanjuti.

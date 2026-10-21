@@ -1,0 +1,29 @@
+LAN CONTROL 5 v1.4.2 - PEMROSESAN LEBIH RINGAN
+
+WAJIB perbarui komputer utama dan SEMUA klien. Protokol V5 berbeda dari
+versi 1.4.0/1.4.1. Tutup aplikasi, ganti berkas di folder yang sama, lalu
+jalankan kembali. Startup otomatis tetap mengarah ke lokasi JAR yang sama.
+
+Optimasi:
+- Pratinjau kartu: maksimal 640x360, JPEG kualitas 65%, jeda dasar 300 ms.
+- Jendela Perbesar: mode Otomatis maksimal 1600x900, JPEG kualitas 85%.
+  Pilihan HD 1080p dan Asli tetap tersedia saat membutuhkan detail lebih.
+- Jendela yang diminimalkan/tidak terlihat diperbarui lebih jarang.
+- Layar yang sama persis tidak dikompresi/dikirim/digambar ulang. Paket
+  kecil tetap menjaga koneksi dan ACK. Perubahan satu piksel tetap terdeteksi.
+- Tidak lagi membuat beberapa varian screenshot HiDPI pada setiap frame.
+- Resize memakai bilinear yang lebih ringan; cache disk ImageIO dimatikan.
+- Pratinjau tidak disiapkan ulang ketika tampilan besar sedang terbuka.
+- Klik/keyboard tetap diprioritaskan; jeda video saat interaksi 80 ms.
+  Angka ini merupakan jeda tambahan, bukan jaminan FPS atau latensi jaringan.
+- Clipboard Ctrl+C/Ctrl+V, Regangkan, dan Layar penuh tetap tersedia.
+
+Rekomendasi penggunaan:
+Pakai kualitas Otomatis untuk sehari-hari. Perbesar satu klien yang sedang
+digunakan. Untuk koneksi lambat pilih Hemat data. HD/Asli membutuhkan beban
+lebih besar. Jangan menilai FPS saat layar diam karena frame sama dilewati.
+
+Validasi: kompilasi Java 17, pengujian protokol dan file terenkripsi,
+kualitas gambar, antrean input, clipboard, viewport, batas resolusi,
+pacing, dan deteksi perubahan satu piksel. Pengujian dilakukan di Linux;
+beban CPU/RAM aktual pada komputer Windows pengguna belum diukur.

@@ -1,0 +1,9 @@
+build/
+/*.jar
+/*.sig
+*.building
+update/
+KUNCI-RILIS-JANGAN-DIBAGIKAN/
+*.key
+preview-*.png
+/ikon/

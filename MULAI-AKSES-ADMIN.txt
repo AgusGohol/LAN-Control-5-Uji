@@ -1,0 +1,45 @@
+LAN CONTROL 5 v1.3.1 — IZIN ADMINISTRATOR
+
+Gambar contoh Anda adalah permintaan izin administrator (UAC).
+Pembaruan ini menambahkan cara meminta izin tersebut secara resmi di Windows.
+
+1. Ekstrak paket ini di kelima komputer. Tutup aplikasi lama terlebih dahulu.
+2. Pada KOMPUTER KLIEN, tutup klien biasa, lalu buka Jalankan-Klien-Admin.bat.
+3. Saat Windows menampilkan UAC, klik Ya langsung di komputer klien.
+   Nama/penerbit pada UAC mengikuti instalasi Java, bukan AnyDesk.
+4. Pastikan status di jendela klien menunjukkan Izin: ADMINISTRATOR.
+5. Isi kode koneksi minimal 12 karakter dan klik Mulai berbagi layar & izinkan
+   kontrol. Hubungkan dari komputer utama dengan IP klien dan kode yang sama.
+6. Untuk otomatis dengan izin admin pada login berikutnya: dari klien yang
+   sudah berstatus ADMINISTRATOR, klik Aktifkan otomatis dengan izin administrator.
+   Klien memakai Task Scheduler untuk akun Windows ini, bukan layanan tersembunyi.
+7. Untuk menghapus startup: buka klien administrator dan klik Nonaktifkan otomatis
+   saat login. Untuk memutus sesi sekarang, klik Hentikan berbagi / tutup klien.
+8. Gunakan akun Windows administrator yang sama saat setup dan login berikutnya.
+   Jika UAC meminta kredensial akun admin lain, klien berjalan sebagai akun lain;
+   startup dan kode tersimpan akan terikat pada akun tersebut. Login menggunakan
+   akun administrator yang akan digunakan sebelum memasang startup admin.
+9. Simpan folder aplikasi dan Java di lokasi tetap. Jangan memindahkan/hapus JAR.
+
+CAKUPAN
+- Mouse/keyboard desktop dan aplikasi administrator pada desktop biasa.
+- Pengelolaan file mengikuti izin proses klien yang sudah ditingkatkan.
+- Tetap tersedia kontrol individual/serentak, transfer file, clipboard, dan daya.
+
+BELUM SETARA ANYDESK SEPENUHNYA
+- Layar UAC (secure desktop), lock screen, layar login Windows, dan
+  Ctrl+Alt+Delete belum dapat ditampilkan/dikontrol oleh versi Java ini.
+- Permintaan UAC harus disetujui langsung pada klien. Administrator tidak
+  otomatis memberikan kemampuan mengendalikan secure desktop.
+- Tidak mengubah atau menonaktifkan UAC/kebijakan keamanan Windows.
+- Startup setelah login, bukan akses sebelum pengguna login.
+- Jendela dan tombol penghentian akses tetap terlihat.
+
+JIKA TIDAK TERHUBUNG
+Periksa IP dari jendela klien, kode yang sama, status berbagi aktif, versi aplikasi,
+dan izin Java pada jaringan Private. Pesan null kini diganti penjelasan koneksi.
+
+VERIFIKASI
+Kompilasi, protokol terenkripsi, transfer file bertahap, dan uji pembentukan
+perintah UAC/startup telah diperiksa di Linux. Dialog UAC, kontrol aplikasi admin,
+dan startup Task Scheduler belum diuji langsung di Windows. Uji satu klien dulu.

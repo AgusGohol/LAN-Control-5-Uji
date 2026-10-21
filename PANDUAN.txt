@@ -1,0 +1,141 @@
+BACA PEMBARUAN-v1.12.7.txt UNTUK PERBAIKAN LANJUTAN "BUKA OTOMATIS".
+BACA PEMBARUAN-v1.12.6.txt UNTUK "INGAT KODE"/"BUKA OTOMATIS" TANPA POWERSHELL.
+BACA PEMBARUAN-v1.12.5.txt UNTUK PERBAIKAN "INGAT KODE"/"BUKA OTOMATIS" DI PC TERKUNCI.
+BACA PEMBARUAN-v1.12.4.txt UNTUK DIAGNOSA ERROR KLIEN YANG LEBIH ANDAL.
+BACA PEMBARUAN-v1.12.3.txt UNTUK PENYEBAB ERROR KLIEN YANG DITAMPILKAN LANGSUNG.
+BACA PEMBARUAN-v1.12.2.txt UNTUK PESAN ERROR KLIEN YANG BENAR-BENAR TERBACA.
+BACA PEMBARUAN-v1.12.1.txt UNTUK PESAN ERROR KLIEN YANG LEBIH JELAS.
+BACA PEMBARUAN-v1.12.0.txt UNTUK KLIEN INGAT KODE & BUKA OTOMATIS SAAT PC MENYALA.
+BACA PEMBARUAN-v1.11.0.txt UNTUK WARNA BIRU BARU & TEMA GELAP/TERANG.
+BACA PEMBARUAN-v1.10.1.txt UNTUK TAMBAHAN PINTASAN WIN+X (CTRL+ALT+X).
+BACA PEMBARUAN-v1.10.0.txt UNTUK PINTASAN LEWAT KEYBOARD (CTRL+ALT+E = WIN+E, DLL).
+BACA PEMBARUAN-v1.9.0.txt UNTUK BEBERAPA KOMPUTER UTAMA PADA SATU KLIEN SEKALIGUS.
+BACA PEMBARUAN-v1.8.1.txt UNTUK TOMBOL DIALOG YANG LEBIH JELAS.
+BACA PEMBARUAN-v1.8.0.txt UNTUK MENAMBAH/MENGHAPUS KOMPUTER DAN MENGUBAH NAMA.
+BACA PEMBARUAN-v1.7.2.txt UNTUK IKON BARU DAN PINTASAN DESKTOP.
+BACA PEMBARUAN-v1.7.1.txt UNTUK JEDA LEBIH KECIL (LEBIH REALTIME).
+BACA PEMBARUAN-v1.7.0.txt UNTUK LAYAR LEBIH LANCAR (TARGET 30 FPS FULL HD).
+BACA PEMBARUAN-v1.6.2.txt JIKA KLIK TIDAK BERFUNGSI DI APLIKASI TERTENTU (IZIN ADMINISTRATOR).
+BACA PEMBARUAN-v1.6.1.txt UNTUK TARIK FILE & FOLDER KE LAYAR KLIEN.
+BACA PEMBARUAN-v1.6.0.txt UNTUK PEMBARUAN OTOMATIS DARI GITHUB.
+BACA PEMBARUAN-v1.5.1.txt UNTUK PEMBARUAN OTOMATIS (UTAMA DAN KLIEN).
+BACA PEMBARUAN-v1.5.0.txt UNTUK PERBAIKAN BUG, SAMBUNG ULANG OTOMATIS,
+TOMBOL KHUSUS (WIN, ALT+TAB, TASK MANAGER) DAN FILE MANAGER BARU.
+BACA PEMBARUAN-v1.4.4.txt UNTUK FOKUS DENGAN BANYAK KLIEN.
+BACA PEMBARUAN-v1.4.3.txt UNTUK TAMPILAN FOKUS DAN TEKS LEBIH BESAR.
+BACA PEMBARUAN-v1.4.2.txt UNTUK VERSI LEBIH RINGAN DAN CARA UPDATE.
+BACA PEMBARUAN-v1.4.1.txt UNTUK PERBAIKAN UKURAN LAYAR.
+BACA PEMBARUAN-v1.4.0.txt UNTUK CTRL+C / CTRL+V DAN TAMPILAN LAYAR.
+
+BACA PEMBARUAN-v1.3.txt UNTUK KUALITAS GAMBAR DAN PEMASANGAN TERBARU.
+
+BACA MULAI-AKSES-ADMIN.txt UNTUK FITUR ADMINISTRATOR BARU.
+
+LAN CONTROL 5 — VERSI 1.12.7 / AKSES KOMPUTER & STARTUP LOGIN
+Komputer utama dan klien sebanyak yang dibutuhkan (maksimal 4 komputer utama
+membuka satu klien bersamaan) / Windows / Wi-Fi atau LAN yang sama.
+
+PASANG PEMBARUAN
+1. Hentikan klien dan tutup aplikasi utama versi lama.
+2. Ekstrak paket terbaru ke folder permanen pada kelima komputer.
+3. Jalankan Jalankan-Klien.bat pada empat klien dan Jalankan-Utama.bat di utama.
+4. Gunakan versi yang sama di semua komputer. Mulai v1.5.1 klien diperbarui
+   otomatis oleh komputer utama; klien lebih lama dari v1.5.1 perlu dipasang
+   manual sekali.
+5. Java 17+ diperlukan. Runtime Java dan installer EXE belum disertakan.
+
+AKTIFKAN OTOMATIS SAAT WINDOWS LOGIN (SEKALI PADA SETIAP KLIEN)
+1. Isi kode koneksi minimal 12 karakter; gunakan kode sama pada semua komputer.
+2. Klik Aktifkan otomatis saat Windows login.
+3. Aplikasi menyimpan kode menggunakan Windows DPAPI untuk akun Windows ini
+   dan memasang pintasan LAN Control 5 Klien di folder Startup pengguna.
+4. Klien mulai berbagi sekarang; saat akun Windows ini login berikutnya, klien
+   akan terbuka dan berbagi otomatis. Jendela status tetap terlihat.
+5. Jangan pindahkan/hapus JAR atau instalasi Java yang dipakai. Jika lokasi atau
+   kode berubah, nonaktifkan startup lalu aktifkan kembali dari lokasi baru.
+6. Untuk mencabut startup: klik Nonaktifkan otomatis saat login di klien.
+   Untuk memutus akses saat ini: klik Hentikan berbagi / putuskan kontrol.
+7. Menutup aplikasi klien juga menghentikan akses. Startup baru berjalan lagi
+   saat login Windows berikutnya. Fitur ini bukan layanan sebelum login.
+8. Startup memakai izin akun Windows biasa. Jendela UAC, layar login/lock,
+   dan Ctrl+Alt+Delete belum dapat dikontrol oleh aplikasi ini.
+
+HUBUNGKAN DARI KOMPUTER UTAMA
+- Isi Kode dengan kode yang sama seperti pada klien.
+- Isi kolom tiap komputer dengan IPv4 yang tampil pada Alamat komputer ini
+  di aplikasi klien; bukan TCP 45851 atau Default Gateway.
+- Klik Hubungkan pada setiap klien, atau Hubungkan semua. IP dan nama tersimpan
+  otomatis. Klik nama komputer untuk menggantinya.
+- Sambung ulang otomatis: jika koneksi putus, utama mencoba lagi sampai Putus
+  diklik. Ingat kode (opsional) menyimpan kode terenkripsi DPAPI sehingga klien
+  tersambung sendiri saat aplikasi utama dibuka.
+- Jika diminta Windows Firewall, izinkan Java di jaringan Private.
+- Port masuk klien TCP 45851; batasi lingkup aturan ke jaringan lokal/utama.
+- Semua komputer harus pada jaringan yang mengizinkan komunikasi antarklien;
+  guest Wi-Fi/client isolation dapat menghalangi koneksi.
+
+KONTROL LAYAR
+- Klik pratinjau atau Perbesar: mouse, keyboard, drag, dan scroll individual.
+- Centang klien dan klik Kontrol serentak: input ke klien yang dipilih saat
+  jendela dibuka. Tutup/buka ulang untuk mengganti daftar target.
+- Pratinjau individual selalu hanya berdampak pada komputer itu.
+- Tombol Windows, Alt+Tab, Alt+F4, Ctrl+Shift+Esc: gunakan Pintasan (kartu) atau
+  Tombol khusus (jendela Perbesar). Ctrl+Alt+Del tidak dapat dikirim.
+- Posisi klik serentak mengikuti koordinat relatif layar. Samakan posisi aplikasi
+  dan zoom; isi layar berbeda dapat menghasilkan klik yang berbeda.
+- Komputer utama menjalankan dashboard, bukan target input serentak.
+- Hanya monitor utama. Resolusi otomatis, HD, Asli/teks hingga 4K, dan Hemat.
+  Rincian serta batas kualitas ada pada PEMBARUAN-v1.3.txt.
+
+FILE & AKSES (INDIVIDUAL)
+Klik File & akses pada kartu klien yang terhubung.
+- Drive: lihat drive; klik dua kali folder atau masukkan alamat folder klien.
+  Kolom ukuran/tanggal; klik judul kolom untuk mengurutkan.
+- Kirim file: buka folder tujuan, lalu Kirim file (bisa beberapa) atau tarik file
+  dari Explorer ke daftar. Nama yang sudah ada disimpan sebagai "nama (2)".
+- Ambil file: pilih satu atau beberapa file (Ctrl/Shift+klik) lalu Ambil file.
+- Bilah kemajuan dan tombol Batal transfer tersedia. Folder: kompres ZIP dahulu.
+- Folder baru, ubah nama/pindah, buka di klien, dan hapus permanen tersedia.
+  Penghapusan meminta konfirmasi. Folder hanya dapat dihapus jika kosong.
+- Transfer menggunakan blok 256 KB. File belum selesai ditaruh sementara,
+  dibersihkan saat batal atau koneksi putus normal. Klik Batal transfer atau
+  tutup jendela untuk membatalkan. Mati listrik/crash dapat menyisakan file .lan5-*.part.
+- Klik layar klien lalu Ctrl+C: salin teks pilihan klien ke clipboard utama.
+  Untuk menempel di komputer utama, pindah aplikasi lalu Ctrl+V.
+  Ctrl+V saat layar klien fokus: jika clipboard utama berisi teks baru, teks itu
+  dikirim lalu ditempel; jika tidak, isi clipboard klien sendiri yang ditempel
+  (berguna untuk menyalin file/gambar di dalam klien).
+  Tab Clipboard & komputer tetap menyediakan cara manual.
+- Buka aplikasi/file: masukkan alamat lengkap EXE/file di komputer klien.
+- Restart/shutdown meminta konfirmasi, dijadwalkan 30 detik, tersedia tombol
+  Batal shutdown. Simpan pekerjaan klien dahulu. Perintah tidak memaksa menutup
+  aplikasi; Windows dapat meminta pengguna menyelesaikan pekerjaan.
+- Kunci mengunci klien; layar terkunci belum bisa dibuka dari aplikasi ini.
+- Semua akses file dan aplikasi mengikuti hak akun Windows pada klien.
+- Startup administrator opsional tersedia sesuai MULAI-AKSES-ADMIN.txt.
+- Tarik file/folder ke layar klien untuk mengirim ke Desktop klien.
+- Belum ada layanan sebelum login, audio, ambil folder sekaligus,
+  clipboard gambar/file, terminal jarak jauh, atau monitor tambahan.
+
+KEAMANAN DAN PENCABUTAN
+- Koneksi wajib kode minimal 12 karakter dan memakai enkripsi AES-GCM.
+- Pengaturan startup berada di %APPDATA%\LANControl5\client.properties;
+  kode dilindungi Windows DPAPI CurrentUser, bukan disimpan sebagai teks biasa.
+- Pintasan berada di folder Startup akun Windows ini; bisa dibuka dengan
+  Windows+R lalu shell:startup. Hapus LAN Control 5 Klien untuk menghentikan
+  startup jika aplikasi tidak dapat dibuka.
+- Tidak ada pembukaan firewall otomatis atau operasi tersembunyi.
+- Satu pengontrol aktif per klien. Utama lain mendapat pesan bahwa klien sedang
+  dipakai.
+- Pengaturan utama: %APPDATA%\LANControl5\controller.properties (IP, nama,
+  pilihan; kode hanya jika Ingat kode dicentang, terenkripsi DPAPI).
+
+BUILD DAN UJI
+- JDK 17+: Build.bat membangun ulang JAR dari src/*.java tanpa dependensi luar.
+- Uji-Protokol.bat menjalankan tes protokol, transfer file, dan pembersihan.
+- Validasi di lingkungan Linux: kompilasi Java 17; protokol terenkripsi dua arah;
+  penolakan kode salah; 50 perintah berurutan; upload/download 700 KB; nama Unicode;
+  cegah penimpaan upload; rename/delete/mkdir; batal dan bersihkan transfer; RPC.
+- Windows DPAPI, pintasan startup saat login, clipboard, mouse/keyboard, firewall,
+  restart/shutdown, dan pengoperasian kelima PC belum diuji langsung di Windows.
+  Uji satu klien terlebih dahulu sebelum menghubungkan keempatnya.

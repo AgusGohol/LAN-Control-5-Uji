@@ -1,0 +1,14 @@
+LAN CONTROL 5 v1.12.6 - "INGAT KODE"/"BUKA OTOMATIS" TANPA POWERSHELL
+
+Perbaikan akhir untuk PC klien yang kebijakan keamanannya membatasi PowerShell
+(Constrained Language Mode), tempat "Ingat kode" dan "Buka otomatis" gagal.
+
+- Penyimpanan kode kini memakai enkripsi milik aplikasi (AES, kunci diturunkan
+  dari akun Windows + nama komputer), bukan DPAPI lewat PowerShell. Jadi tidak
+  terpengaruh pembatasan PowerShell.
+- Pembuatan auto-start: tetap memakai pintasan biasa bila bisa; bila pembuatan
+  pintasan diblokir kebijakan, aplikasi otomatis memakai berkas .cmd di folder
+  Startup sebagai gantinya (tanpa COM).
+
+Catatan: kode yang tersimpan dengan versi lama (format DPAPI) tetap bisa dibaca;
+penyimpanan baru memakai format baru.

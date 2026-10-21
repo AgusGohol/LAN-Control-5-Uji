@@ -1,0 +1,38 @@
+LAN CONTROL 5 v1.7.0 - LAYAR LEBIH LANCAR: TARGET 30 FPS FULL HD
+
+SEBELUMNYA
+Setiap frame mengirim SELURUH layar, lalu ada jeda tetap 120 ms (80 ms saat
+mouse bergerak) dan klien menunggu konfirmasi tiap gambar. Hasilnya sekitar
+6-12 fps.
+
+BARU
+- Hanya bagian layar yang berubah yang dikirim (kotak 64x64 piksel yang
+  digabung). Mengetik, kursor, atau jendela kecil hanya beberapa KB per frame.
+  Perubahan besar (scroll satu halaman, ganti jendela) tetap mengirim layar
+  penuh.
+- Irama tetap 30 fps (33 ms) di jendela Perbesar dan kartu Fokus, tanpa jeda
+  tambahan. Mode Asli/teks 20 fps. Pratinjau kecil tetap hemat (3 fps).
+- Dua frame boleh dalam perjalanan sekaligus: waktu tempuh jaringan tidak lagi
+  memotong fps. Jika jaringan tidak sanggup, Otomatis menurunkan resolusi
+  sementara lalu naik lagi saat lancar.
+- Otomatis kini hingga Full HD 1920x1080 (sebelumnya 1600x900).
+- Saat bergerak gambar sedikit lebih ringan; 1 detik setelah diam dikirim
+  satu gambar tajam (Otomatis 88%, HD 92%, Asli/teks lossless PNG).
+- Angka fps di kartu kini fps nyata 2 detik terakhir.
+
+HASIL UJI (komputer uji 2 inti, Full HD, koneksi terenkripsi lokal)
+  Mengetik ........ 30 fps, ~2 KB per frame (0,4 Mbps)
+  Scroll halaman .. 25-30 fps, ~50 KB per frame (~12 Mbps)
+  Video bergerak .. 28-30 fps, ~65-95 KB per frame (15-22 Mbps)
+Belum termasuk waktu tangkap layar Windows di klien (biasanya 10-25 ms untuk
+Full HD), jadi di PC klien yang lambat hasil bisa sekitar 20-25 fps.
+
+PILIHAN TERBAIK
+- LAN kabel: "HD 1080p" - paling tajam, 30 fps.
+- Wi-Fi atau Tailscale: "Otomatis" - paling stabil; resolusi menyesuaikan.
+- Membaca teks kecil/kode: "Asli / teks" - piksel asli, lossless saat diam.
+- Koneksi sangat lambat: "Hemat data".
+
+KOMPATIBILITAS
+Klien dan utama v1.7.0 diperlukan untuk kecepatan baru. Klien lama tetap
+berfungsi dengan cara lama dan diperbarui otomatis oleh komputer utama.

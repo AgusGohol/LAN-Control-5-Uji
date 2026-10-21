@@ -1,0 +1,30 @@
+LAN CONTROL 5 v1.7.1 - JEDA LEBIH KECIL (LEBIH REALTIME)
+
+DITEMUKAN
+- Komputer utama memperkecil/membesarkan gambar ke ukuran jendela dengan cara
+  Java bawaan yang lambat: ~40-80 ms setiap frame (HD 1080p di jendela lebih
+  kecil, atau Windows dengan skala tampilan 125%/150%). Ini penyebab utama
+  jeda dan patah-patah, bukan jaringan.
+- Setelah klik/ketik, klien menunggu jadwal frame berikutnya.
+
+PERBAIKAN
+- Pengubah ukuran gambar baru: 6-11 ms untuk Full HD (3-8x lebih cepat),
+  hasil visual sama (selisih rata-rata < 1/255). Juga dipakai di klien.
+- Saat mengetik/klik, hanya bagian yang berubah yang diubah ukurannya
+  (kurang dari 1 ms), hasilnya identik piksel per piksel dengan cara penuh.
+- Klik, ketikan, dan scroll langsung memicu tangkapan layar ~9 ms kemudian
+  (waktu aplikasi menggambar ulang), tidak menunggu jadwal frame.
+- Saat berinteraksi, irama naik ke 40 fps (25 ms).
+- Konfirmasi frame tidak lagi tertahan oleh gerakan mouse yang terus-menerus.
+
+HASIL UKUR (input sampai tampil di komputer utama, Full HD, jendela 1700x1000,
+termasuk 8 ms aplikasi menggambar ulang dan 15 ms tangkap layar)
+  v1.7.0 : median 79-86 ms, 90% di bawah ~330 ms
+  v1.7.1 : median 58-67 ms, 90% di bawah ~70 ms
+Di jaringan Wi-Fi/Tailscale tambahkan waktu tempuh jaringan.
+
+SARAN UNTUK PALING REALTIME
+- LAN kabel; pilih Otomatis atau HD 1080p.
+- Klien dengan izin Administrator (lihat PEMBARUAN-v1.6.2.txt).
+- Jika komputer utama lambat, perkecil jendela Perbesar atau gunakan
+  "Ukuran asli 1:1" (tanpa pengubahan ukuran sama sekali).

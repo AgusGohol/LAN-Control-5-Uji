@@ -1,0 +1,18 @@
+LAN CONTROL 5 v1.4.3 - TAMPILAN LEBIH MUDAH DIBACA
+
+- Fokus klien aktif menyala secara default. Jika hanya satu klien online,
+  kartu klien menjadi besar. Pada jendela lebar, klien offline tersusun
+  ringkas di samping kanan. Pada jendela sempit, daftar disusun ke bawah.
+- Matikan Fokus klien aktif untuk kembali ke susunan semua kartu.
+- Saat beberapa klien online, susunan kembali menampilkan semua layar.
+- Font umum 15 pt, tombol 14 pt, keterangan minimal 13 pt dan lebih terang.
+- Pratinjau besar memakai kualitas pilihan pengguna. Pratinjau kecil
+  tetap memakai mode ringan. Gunakan Otomatis untuk penggunaan biasa.
+- Perbesar, Ukuran asli 1:1, Ctrl+C/Ctrl+V dan Layar penuh tetap tersedia.
+
+Pembaruan utama: tutup aplikasi utama, ganti berkas di folder yang sama,
+lalu jalankan kembali. Klien v1.4.2 tetap kompatibel (protokol V5).
+Klien yang lebih lama dari 1.4.2 tetap perlu diperbarui.
+
+Validasi: kompilasi Java 17, render dan pemeriksaan layout pada lebar
+1480 dan 900 piksel. Belum diperiksa langsung di Windows pengguna.

@@ -1,0 +1,33 @@
+LAN CONTROL 5 v1.9.0 - BEBERAPA KOMPUTER UTAMA PADA SATU KLIEN
+
+KONTROL BERSAMA
+- Sampai 4 komputer utama dapat membuka dan mengontrol klien yang sama
+  pada waktu bersamaan. Sebelumnya komputer utama kedua ditolak dengan pesan
+  "Klien sedang dikontrol komputer utama lain".
+- Setiap komputer utama melihat layar klien secara langsung dan dapat
+  menggerakkan mouse serta mengetik. Klien hanya punya SATU kursor dan SATU
+  keyboard: jika dua orang bergerak bersamaan, kursornya akan tarik-menarik.
+  Bergantianlah, misalnya dengan saling memberi tahu siapa yang sedang memegang.
+- Komputer utama ke-5 tetap ditolak, dengan pesan yang menyebut batas 4.
+
+TAHU SIAPA LAGI YANG MEMBUKA
+- Kartu komputer di komputer utama menampilkan "Juga dikontrol N komputer
+  utama lain" (warna kuning). Arahkan mouse ke tulisan itu untuk melihat nama
+  komputer Windows dan IP-nya. Saat ada yang baru bergabung, muncul
+  pemberitahuan singkat di bawah layar.
+- Jendela klien menampilkan "Dikontrol bersama oleh 2 komputer utama: ...".
+
+TOMBOL YANG DITAHAN
+- Tombol (misalnya Shift atau Ctrl) atau klik mouse yang sedang ditahan satu
+  komputer utama tidak ikut terlepas saat komputer utama lain melepas tombol
+  yang sama, memutus sambungan, atau memakai "Lepaskan semua tombol".
+
+YANG PERLU DIKETAHUI
+- Setiap komputer utama tambahan menambah beban CPU dan jaringan di klien,
+  karena layar dikirim ke masing-masing.
+- Pembaruan otomatis ke klien hanya dikirim oleh satu komputer utama sekaligus.
+- Meminta izin Administrator atau memasang pembaruan membuat klien mulai ulang;
+  semua komputer utama tersambung kembali sendiri.
+- Klien harus sudah v1.9.0. Klien versi lama tetap hanya menerima satu
+  komputer utama sampai diperbarui (otomatis oleh komputer utama v1.9.0 yang
+  terhubung ke klien itu).

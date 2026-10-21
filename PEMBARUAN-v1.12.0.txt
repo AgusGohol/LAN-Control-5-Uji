@@ -1,0 +1,27 @@
+LAN CONTROL 5 v1.12.0 - KLIEN INGAT KODE & BUKA OTOMATIS SAAT PC MENYALA
+
+Di jendela klien, kolom kode koneksi kini punya pengaturan baru.
+
+INGAT KODE
+- Ceklis "Ingat kode" di samping kolom kode. Kode disimpan terenkripsi
+  (Windows DPAPI, hanya untuk akun Windows ini) dan terisi otomatis setiap
+  kali klien dibuka. Tidak perlu lagi mengabari PC klien untuk mengetik kode.
+
+BUKA & BERBAGI OTOMATIS SAAT PC DINYALAKAN
+- Ceklis "Buka & berbagi otomatis saat PC dinyalakan". Setelah akun Windows
+  ini login, klien terbuka sendiri dan langsung berbagi memakai kode
+  tersimpan - tanpa ada yang perlu menyentuh PC klien.
+- Ceklis "dengan izin Administrator (kontrol penuh)" agar klien terbuka
+  sebagai Administrator, sehingga komputer utama bisa klik ke Task Manager,
+  installer, dan aplikasi Administrator lain.
+    Cara mengaktifkan mode Administrator (sekali saja per PC klien):
+    buka klien lewat Jalankan-Klien-Admin.bat (setujui UAC), lalu centang
+    kedua kotak. Setelah itu, setiap PC menyala klien langsung siap tanpa UAC.
+
+Ceklis mencerminkan keadaan sebenarnya saat jendela dibuka. Mematikan "Ingat
+kode" tidak bisa selama "Buka otomatis" masih aktif (kodenya masih diperlukan).
+
+CATATAN
+Tanpa izin Administrator di klien, komputer utama tetap tidak bisa mengklik
+ke jendela Administrator di klien (aturan Windows). Mode Administrator di atas
+adalah cara yang benar untuk kontrol penuh otomatis.

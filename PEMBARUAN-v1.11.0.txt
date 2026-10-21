@@ -1,0 +1,18 @@
+LAN CONTROL 5 v1.11.0 - WARNA BARU (BIRU) & TEMA GELAP/TERANG
+
+WARNA MENGIKUTI IKON
+- Warna aksen aplikasi kini biru, menyesuaikan ikon LAN Control 5
+  (dua layar dengan gradien biru). Sebelumnya hijau toska.
+
+TEMA GELAP / TERANG - GANTI LANGSUNG
+- Tombol tema ada di komputer utama (baris kode koneksi) dan di jendela klien
+  (kanan bawah):
+    "☀ Terang"  -> pindah ke tema terang
+    "☾ Gelap"   -> pindah ke tema gelap
+- Pergantian LANGSUNG terlihat tanpa menutup/membuka aplikasi.
+- Pilihan tema disimpan dan dipakai lagi saat aplikasi berikutnya dibuka,
+  serta setelah pembaruan otomatis.
+
+Tema hanya mengubah tampilan; koneksi, kualitas, nama komputer, dan semua
+pengaturan lain tidak terpengaruh. Termasuk juga pintasan Win+X (Ctrl+Alt+X)
+yang ditambahkan sebelumnya.

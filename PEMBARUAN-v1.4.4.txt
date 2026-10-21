@@ -1,0 +1,20 @@
+LAN CONTROL 5 v1.4.4 - FOKUS TETAP AKTIF DENGAN BANYAK KLIEN
+
+Perilaku baru:
+- Klien kedua/ketiga/keempat terhubung tidak membatalkan tampilan fokus.
+- Klien yang sedang difokuskan tetap besar di sebelah kiri pada jendela lebar.
+- Klien online lain menampilkan pratinjau kecil di sisi kanan.
+- Klik Fokus di bagian atas kartu klien untuk memindahkannya ke layar besar.
+- Jika klien fokus terputus, klien online lain dipilih otomatis.
+- Matikan Fokus klien aktif jika ingin susunan kartu yang sama besar.
+- Pemilihan Fokus berbeda dari centang Pilih untuk kontrol serentak.
+- Pada jendela sempit kartu fokus ada di atas, kartu lain di bawah (gulir).
+
+Cukup perbarui komputer utama jika semua klien sudah versi 1.4.2 atau 1.4.3
+(protokol V5). Tutup utama, ganti berkas pada folder aplikasi yang sama,
+lalu buka kembali. Klien versi sebelum 1.4.2 perlu diperbarui juga.
+
+Validasi: kompilasi Java 17 dan pemeriksaan render pada 1480/900/1920 piksel,
+retensi fokus ketika klien kedua online, perpindahan fokus, fallback ketika
+klien fokus terputus dan pilihan kembali ke grid. Validasi dilakukan pada
+Linux/headless; belum diuji langsung pada komputer Windows pengguna.

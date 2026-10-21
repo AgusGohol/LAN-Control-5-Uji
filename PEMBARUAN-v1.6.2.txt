@@ -1,0 +1,34 @@
+LAN CONTROL 5 v1.6.2 - PERINGATAN & PERBAIKAN IZIN ADMINISTRATOR KLIEN
+
+MASALAH
+Klien yang dibuka dengan Jalankan-Klien.bat (izin BIASA) tidak dapat mengklik
+atau mengetik ke jendela yang berjalan sebagai Administrator: Task Manager,
+installer, Regedit, Services, atau aplikasi "Run as administrator". Ini aturan
+keamanan Windows (UIPI), bukan kerusakan jaringan.
+
+BARU
+- Kartu klien di komputer utama menampilkan "⚠ Izin BIASA" berwarna kuning
+  untuk klien tanpa izin Administrator. Klik tulisan itu untuk penjelasan dan
+  tombol "Minta izin Administrator":
+  jendela UAC muncul di komputer klien; SESEORANG DI KLIEN menekan Ya.
+  Klien mulai ulang dengan izin Administrator, melanjutkan berbagi dengan kode
+  yang sama, dan komputer utama tersambung kembali sendiri.
+- Jendela klien BIASA menampilkan peringatan kuning dan tombol
+  "Mulai ulang sebagai Administrator (disarankan)".
+- Jika klien BIASA memakai startup otomatis saat login, setelah naik ke
+  Administrator startup-nya otomatis dipindah ke startup Administrator
+  (Task Scheduler): login berikutnya langsung berizin Administrator tanpa UAC.
+- UAC ditolak/diabaikan: klien tetap berjalan dengan izin BIASA dan berbagi
+  dilanjutkan.
+
+CATATAN
+- Layar UAC, layar kunci, dan login Windows tetap tidak dapat dikendalikan
+  dari jarak jauh (layar aman Windows), termasuk dengan izin Administrator.
+- Gunakan akun Windows yang sama saat menekan Ya pada UAC.
+- Klien lama diperbarui otomatis ke v1.6.2 saat terhubung ke komputer utama.
+
+VALIDASI
+Semua uji lama lolos. Uji baru: klien melaporkan izin, kartu utama memberi
+peringatan, permintaan elevasi dari utama, klien Administrator tidak
+dimulai ulang, perintah elevasi mempertahankan berbagi dan startup.
+UAC sendiri belum diuji langsung di Windows.

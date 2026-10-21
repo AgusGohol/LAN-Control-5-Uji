@@ -1,0 +1,18 @@
+LAN CONTROL 5 v1.12.11 - PERBAIKAN: APLIKASI TIDAK MUNCUL
+
+Di v1.12.10, saat startup otomatis jendela klien disembunyikan sampai port
+didapat. Akibatnya, bila terjadi kendala (mis. sisa instance lama memegang
+port), klien bisa TIDAK MUNCUL sama sekali.
+
+Perbaikan:
+- Jendela klien kini selalu tampil begitu dibuka (tidak pernah tersembunyi).
+- Instance Administrator TIDAK PERNAH menutup dirinya sendiri; bila port sedang
+  dipakai klien lain, ia tetap tampil dan hanya memberi keterangan
+  ("Klien lain sudah berjalan di komputer ini - jendela ini boleh ditutup").
+- Hanya instance non-admin yang berlebih (sisa startup lama) yang menutup diri
+  diam-diam, sehingga akhirnya tersisa satu klien - tanpa membuat aplikasi hilang.
+
+Bila sebuah PC klien tampak tidak memunculkan aplikasi:
+  1. Nyalakan ulang PC klien (membersihkan sisa instance yang menyangkut).
+  2. Bila masih belum muncul, buka klien manual lewat Jalankan-Klien-Admin.bat.
+Setelah naik ke v1.12.11, masalah "tidak muncul" ini tidak terjadi lagi.

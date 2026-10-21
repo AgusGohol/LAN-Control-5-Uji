@@ -1,0 +1,22 @@
+LAN CONTROL 5 v1.8.0 - JUMLAH KOMPUTER BEBAS & NAMA KOMPUTER
+
+JUMLAH KOMPUTER KLIEN BEBAS
+- Tombol "+ Tambah komputer" di bagian atas: isi nama dan IP (keduanya boleh
+  dikosongkan). Jika IP dan kode koneksi sudah diisi, langsung terhubung.
+- Tombol ✕ di setiap kartu: hapus komputer dari daftar (dengan konfirmasi;
+  koneksinya diputus). Minimal tersisa satu komputer, maksimal 200.
+- Nomor kartu menyesuaikan setelah ada yang dihapus.
+- Tampilan menyesuaikan jumlah: 1 kolom (jendela sempit), 2 kolom, atau
+  3 kolom (jendela lebar dengan lebih dari 4 komputer). Jika tidak muat,
+  daftar dapat digulir. Mode Fokus: satu layar besar, lainnya di kolom kanan.
+- Jumlah komputer, nama, dan IP tersimpan dan kembali saat aplikasi dibuka.
+  Pengaturan dari versi lama tetap dibuka dengan 4 komputer.
+- Penghitung kini "x / jumlah sebenarnya klien online".
+
+NAMA KOMPUTER
+- Tombol "✎ Ubah nama" di samping nama setiap komputer (mengklik nama juga
+  bisa). Contoh: Kasir 1, Lab-02, Ruang Guru. Maksimal 40 huruf.
+  Kosongkan untuk kembali ke "Komputer N".
+- Komputer yang masih bernama "Komputer N" otomatis memakai nama komputer
+  Windows klien saat pertama terhubung (klien v1.8.0). Nama yang sudah Anda
+  ubah tidak pernah ditimpa.

@@ -1,0 +1,40 @@
+LAN CONTROL 5 v1.4.0
+
+PEMASANGAN
+1. Tutup aplikasi utama dan klien versi lama.
+2. Ekstrak ZIP. Gunakan versi 1.4.0 di komputer utama dan SEMUA klien.
+   Versi ini memakai protokol V4; jangan campur dengan versi lama.
+3. Jika startup otomatis aktif, gunakan folder aplikasi yang sama lalu
+   ganti file di dalamnya. Lokasi JAR harus tetap sama.
+4. Jalankan peluncur Utama/Klien seperti biasa; IP, port dan kode tetap sama.
+
+COPY / PASTE TEKS
+- Klik layar klien di pratinjau atau jendela Perbesar untuk memberi fokus.
+- Pilih teks klien lalu Ctrl+C. Aplikasi menyalin ke clipboard utama.
+  Tunggu sesaat sampai salinan tiba, pindah ke aplikasi utama lalu Ctrl+V.
+- Untuk arah sebaliknya: Ctrl+C di aplikasi utama, klik posisi tujuan
+  di layar klien, lalu Ctrl+V. Teks dikirim dan ditempel di klien.
+- Salinan hanya diambil saat Ctrl+C ditekan di layar kontrol. Tidak ada
+  pemantauan seluruh clipboard Windows sepanjang waktu.
+- Maksimal 1 juta karakter; hanya teks, termasuk Unicode dan baris baru.
+- Dalam kontrol serentak, Ctrl+C mengambil dari klien sumber tampilan;
+  Ctrl+V mengirim teks yang sama ke semua target jendela tersebut.
+- Clipboard & komputer tetap tersedia sebagai alternatif manual.
+
+PERBESAR LAYAR
+Klik Perbesar pada kartu klien, lalu pilih:
+- Pas jendela: semua gambar terlihat, proporsi tetap.
+- Ukuran asli 1:1: piksel asli, gunakan bilah gulir jika perlu.
+- Regangkan: memenuhi area tampilan, mengikuti contoh video. Proporsi
+  gambar dapat berubah bila perbandingan layar berbeda.
+- Layar penuh: jendela tanpa bingkai mengikuti monitor. Toolbar tetap
+  terlihat untuk keluar. Tekan Esc atau Keluar layar penuh untuk kembali.
+Resolusi stream tetap menyesuaikan area tampilan pada kualitas Otomatis.
+Pilihan ini mengubah tampilan di utama, bukan resolusi desktop Windows klien.
+
+VALIDASI
+Build Java 17, pengujian protokol terenkripsi, layanan file, kualitas,
+antrean input, clipboard Unicode, urutan shortcut, pemetaan klik regangkan,
+dan perilaku Escape lolos pada lingkungan pengembangan Linux/headless.
+Integrasi clipboard Windows/Robot dan pergantian layar penuh pada Windows
+belum diuji langsung pada komputer Windows.

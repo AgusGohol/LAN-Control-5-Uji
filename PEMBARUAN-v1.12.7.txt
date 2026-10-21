@@ -1,0 +1,10 @@
+LAN CONTROL 5 v1.12.7 - "BUKA OTOMATIS" LANGKAH PEMBERSIHAN TIDAK LAGI MENGHALANGI
+
+Lanjutan v1.12.6. "Buka otomatis" masih gagal di PC dengan PowerShell terbatas
+karena langkah pertama (membersihkan tugas terjadwal lama lewat PowerShell)
+ikut diblokir dan menghentikan seluruh proses.
+
+- Langkah pembersihan itu kini "lewati bila gagal" (memang hanya pembersihan).
+  Sehingga penyimpanan kode (AES) dan pembuatan auto-start (.cmd) tetap berjalan.
+
+"Ingat kode" dan "Buka otomatis" kini berfungsi di PC yang membatasi PowerShell.

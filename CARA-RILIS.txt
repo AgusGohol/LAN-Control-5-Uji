@@ -1,0 +1,35 @@
+CARA MENERBITKAN VERSI BARU (UNTUK PENGEMBANG / CLAUDE)
+
+Saluran pembaruan:
+- GitHub (internet): komputer utama semua pengguna membaca
+  raw.githubusercontent.com/<REPO>/main/rilis/versi-terbaru.txt saat dibuka dan
+  tiap 6 jam, mengunduh rilis/LAN-Control-5-<versi>.jar + .sig, memverifikasi
+  tanda tangan Ed25519, lalu menaruhnya di update\ dan memasang saat tidak dipakai.
+  (Sesi Claude tidak diizinkan membuat GitHub Releases, jadi kanalnya berupa
+  file di repository yang cukup di-push.)
+- Folder update\ (lokal): JAR yang ditaruh langsung di update\LAN-Control-5.jar
+  pada komputer utama dipasang tanpa tanda tangan (akses folder = akses penuh).
+- Klien diperbarui oleh komputer utama melalui koneksi LAN terenkripsi.
+
+Langkah rilis:
+1. Naikkan VERSION di src/LanControl.java (mis. 1.6.0 -> 1.6.1).
+2. java Build.java ; lalu java -jar LAN-Control-5.jar --test (semua PASS).
+3. Tanda tangan dengan kunci offline (folder KUNCI-RILIS-JANGAN-DIBAGIKAN,
+   tidak pernah di repo). Cara termudah (Java di komputer pemilik adalah JRE):
+   taruh JAR baru di LAN-Control-5\rilis-baru\ lalu klik dua kali
+   Tandatangani-Rilis.bat (otomatis menjalankan Bersihkan-Sisa-Rilis.bat dulu).
+   Setelah rilis terbit, Bersihkan-Sisa-Rilis.bat menghapus JAR/.sig di rilis-baru.
+   Cara manual dengan JDK:
+     java tools/Rilis.java "<folder kunci>\lan5-release-private.key"
+4. Salin ke folder rilis/ dengan nama berversi:
+     rilis/LAN-Control-5-X.Y.Z.jar  dan  rilis/LAN-Control-5-X.Y.Z.jar.sig
+   serta paket pengguna rilis/LAN-Control-5-X.Y.Z.zip (folder LAN-Control-5 berisi
+   LAN-Control-5.jar, semua .bat, MULAI-DI-SINI.txt, PANDUAN dan PEMBARUAN terbaru),
+   lalu ubah rilis/versi-terbaru.txt menjadi "versi=X.Y.Z" (paling akhir).
+   Hapus file rilis yang lebih lama dari versi SEBELUMNYA: simpan hanya versi
+   terbaru dan satu versi sebelumnya (komputer yang baru membaca versi-terbaru.txt
+   lama dari cache GitHub masih bisa mengunduhnya). Riwayat git tetap menyimpannya.
+5. Tulis PEMBARUAN-vX.Y.Z.txt, commit, push ke main. Kunci privat, update\
+   dan build\ TIDAK pernah ikut (lihat .gitignore).
+6. Komputer utama pemilik: taruh JAR yang sama di update\LAN-Control-5.jar
+   agar terpasang tanpa menunggu pemeriksaan 6 jam.

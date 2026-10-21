@@ -1,0 +1,27 @@
+LAN CONTROL 5 v1.6.1 - TARIK FILE & FOLDER KE LAYAR KLIEN
+
+BARU
+- Tarik file atau folder dari Windows Explorer langsung ke layar klien
+  (pratinjau kartu atau jendela Perbesar). Saat ditarik, layar menampilkan
+  "Lepas untuk mengirim ke Desktop klien". File/folder tersimpan di Desktop
+  akun Windows yang sedang dipakai di klien (ikut Desktop OneDrive bila ada).
+- Folder lengkap kini bisa dikirim: isi, sub-folder, dan folder kosong ikut.
+  Berlaku juga di File & akses ("Kirim file / folder" atau tarik ke daftar).
+- Nama yang sudah ada tidak ditimpa: disimpan sebagai "nama (2)".
+- Jendela kemajuan dengan persen, ukuran, kecepatan, dan tombol Batal.
+- Kontrol serentak: file yang ditarik dikirim ke Desktop SEMUA klien target
+  (dengan konfirmasi terlebih dahulu).
+- Pembaruan otomatis menunggu sampai pengiriman file selesai.
+
+BATASAN
+- Menarik file DARI layar klien ke komputer utama belum memungkinkan; gunakan
+  Ambil file di File & akses.
+- Klien harus v1.6.1. Klien lama diperbarui otomatis oleh komputer utama saat
+  terhubung; tunggu sampai tersambung kembali lalu tarik file lagi.
+
+VALIDASI
+Semua uji lama lolos. Uji baru: alamat Desktop klien, kirim file + folder
+bertingkat (Unicode, folder kosong, file multi-blok 600 KB) persis sama,
+tidak menimpa file yang ada, folder yang sama dikirim dua kali menjadi
+"(2)", pembatalan, tanpa sisa file sementara, dan tampilan saat menarik.
+Belum diuji langsung di Windows Explorer.

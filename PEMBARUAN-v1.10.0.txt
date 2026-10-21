@@ -1,0 +1,34 @@
+LAN CONTROL 5 v1.10.0 - PINTASAN LEWAT KEYBOARD
+
+Isi menu "Pintasan" kini juga bisa dilakukan langsung dari keyboard.
+Klik layar klien dulu (di kartu atau jendela Perbesar), lalu tekan:
+
+  Ctrl + Alt + W        Tombol Windows (menu Start)
+  Ctrl + Alt + D        Win + D (tampilkan desktop)
+  Ctrl + Alt + E        Win + E (File Explorer)
+  Ctrl + Alt + R        Win + R (Run)
+  Ctrl + Alt + S        Win + Shift + S (potong layar)
+  Alt + Page Up         Alt + Tab (ganti jendela; tahan Alt, tekan Page Up lagi
+                        untuk pindah ke jendela berikutnya)
+  Alt + Page Down       Alt + Shift + Tab (jendela sebelumnya)
+  Ctrl + Alt + F4       Alt + F4 (tutup jendela aktif di klien)
+  Ctrl + Alt + Esc      Ctrl + Shift + Esc (Task Manager klien)
+  Ctrl + Alt + P        Print Screen (juga: Ctrl + Alt + tanda + di numpad)
+  Ctrl + Alt + K        Lepaskan semua tombol yang tertahan di klien
+
+PENANDA FOKUS & DAFTAR PINTASAN DI JENDELA PERBESAR
+- Di jendela "Perbesar", saat layar klien aktif (Anda sudah mengkliknya) muncul
+  bingkai hijau dan label "⌨ Ketikan & pintasan → klien": tanda bahwa ketikan
+  dan pintasan keyboard Anda sekarang masuk ke klien, bukan ke komputer utama
+  (mirip AnyDesk). Saat belum aktif, labelnya "Klik layar untuk mengetik ke klien".
+- Daftar pintasan keyboard (Ctrl+Alt+E → Win+E, Alt+PgUp → Alt+Tab, dll.) kini
+  tampil di bagian bawah jendela Perbesar, jadi tidak perlu membuka menu.
+
+KENAPA TIDAK MEMAKAI TOMBOL ASLINYA?
+Tombol Windows, Alt+Tab, Alt+F4, Ctrl+Shift+Esc dan Print Screen ditangkap oleh
+Windows di komputer utama sebelum sampai ke LAN Control, sehingga yang terbuka
+adalah menu di komputer utama. Kombinasi di atas tidak ditangkap Windows, dan
+sebagian sama dengan Remote Desktop bawaan Windows (Alt+Page Up, Ctrl+Alt+tanda +).
+
+Daftar ini juga tertulis di sebelah kanan setiap pilihan di menu "Pintasan".
+Ctrl + Alt + Del tetap tidak didukung (layar aman Windows).

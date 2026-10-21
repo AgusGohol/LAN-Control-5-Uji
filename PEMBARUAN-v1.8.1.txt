@@ -1,0 +1,12 @@
+LAN CONTROL 5 v1.8.1 - TOMBOL DIALOG TERBACA
+
+PERBAIKAN TAMPILAN
+- Tombol OK / Cancel / Yes / No di semua jendela dialog (misalnya
+  "Ubah nama komputer", "Tambah komputer", "Hapus komputer", konfirmasi
+  kirim file, pesan kesalahan) sebelumnya bertuliskan putih di atas tombol
+  abu-abu terang sehingga hampir tidak terbaca.
+- Kini tombol tersebut berlatar gelap sesuai tema aplikasi, dengan tulisan
+  terang yang jelas, sorotan saat ditekan, dan garis fokus hijau.
+- Tombol di jendela pilih file (Kirim / Ambil file) ikut diperbaiki.
+
+Tidak ada perubahan pada koneksi, pengaturan, atau data yang tersimpan.

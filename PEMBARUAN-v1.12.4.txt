@@ -1,0 +1,9 @@
+LAN CONTROL 5 v1.12.4 - DIAGNOSA ERROR KLIEN LEBIH ANDAL
+
+- Pesan penyebab error kini ditulis lewat jalur keluaran standar (stdout)
+  yang tetap bekerja meski jalur error (stderr) dibatasi kebijakan Windows.
+- Dialog menampilkan jenis dan teks error Windows yang sebenarnya, termasuk
+  untuk penyimpanan kode (pesan error kripto tidak memuat kode rahasia).
+
+Lanjutan v1.12.1-v1.12.3 untuk menemukan penyebab kegagalan "Ingat kode" /
+"Buka otomatis" di klien tertentu.

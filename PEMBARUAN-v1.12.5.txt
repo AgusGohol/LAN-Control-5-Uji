@@ -1,0 +1,11 @@
+LAN CONTROL 5 v1.12.5 - PERBAIKAN "INGAT KODE" / "BUKA OTOMATIS" DI PC TERKUNCI
+
+- Di sebagian PC klien dengan kebijakan keamanan ketat (AppLocker/WDAC),
+  PowerShell dipaksa "Constrained Language Mode" saat dipanggil langsung oleh
+  aplikasi, sehingga penyimpanan kode (DPAPI) dan pembuatan pintasan (COM)
+  gagal tanpa pesan ("Pengaturan Windows gagal. (kode keluar 1, tanpa pesan)").
+- Aplikasi kini memanggil PowerShell MELALUI cmd, sama seperti menjalankannya
+  dari Command Prompt, sehingga mendapat mode penuh dan operasi berhasil.
+
+Jika "Ingat kode" / "Buka otomatis" sebelumnya gagal di PC tertentu, coba lagi
+setelah pembaruan ini.

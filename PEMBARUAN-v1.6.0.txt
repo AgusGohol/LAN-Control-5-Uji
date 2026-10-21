@@ -1,0 +1,30 @@
+LAN CONTROL 5 v1.6.0 - PEMBARUAN OTOMATIS DARI GITHUB
+
+UNTUK SIAPA
+Semua pengguna LAN Control 5 v1.6.0 ke atas, di mana pun, akan menerima versi
+baru yang diterbitkan di https://github.com/AgusGohol/LAN-Control-5 (folder rilis)
+
+CARA KERJA
+1. Komputer utama memeriksa rilis/versi-terbaru.txt di GitHub 20 detik setelah dibuka
+   dan setiap 6 jam (tanpa login/akun; mengikuti pengaturan proxy Windows).
+2. Jika ada versi lebih baru, file diunduh lalu DIPERIKSA TANDA TANGAN
+   DIGITALNYA (Ed25519). File yang tanda tangannya tidak cocok, berubah,
+   versinya tidak sesuai, atau lebih lama, DITOLAK.
+3. File yang lolos ditaruh di folder update\ dan dipasang seperti v1.5.1:
+   mulai ulang otomatis saat aplikasi utama tidak dipakai 1 menit, kode dan
+   klien tersambung kembali, lalu klien diperbarui oleh komputer utama.
+4. Arahkan mouse ke "Cek pembaruan internet" untuk melihat hasil pemeriksaan
+   terakhir. Hilangkan centang untuk mematikan pemeriksaan internet.
+
+PEMASANGAN
+- Pengguna yang sudah memakai v1.5.1: komputer utama Anda memasang v1.6.0
+  otomatis; klien ikut diperbarui.
+- Pengguna baru: unduh ZIP repository (Code > Download ZIP), ambil
+  rilis/LAN-Control-5-<versi>.jar, ganti namanya menjadi LAN-Control-5.jar dan
+  taruh di folder aplikasi (bersama file .bat), pasang di utama dan semua klien.
+  Setelah itu semua otomatis.
+
+KEAMANAN
+- Kunci rahasia penandatangan tidak berada di GitHub. Meskipun akun GitHub
+  dibobol, aplikasi tidak akan memasang versi palsu.
+- Klien tidak pernah mengakses internet untuk pembaruan; hanya komputer utama.

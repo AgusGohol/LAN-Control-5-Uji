@@ -1,0 +1,51 @@
+LAN CONTROL 5 v1.5.1 - PEMBARUAN OTOMATIS
+
+PEMASANGAN SEKALI (WAJIB UNTUK VERSI INI SAJA)
+- Komputer utama: sudah dipasang langsung oleh Claude ke folder aplikasi.
+- Empat klien: tutup klien, salin LAN-Control-5.jar versi 1.5.1 ke folder
+  aplikasi klien (folder yang sama, agar startup otomatis tetap berjalan),
+  lalu buka klien lagi. Ini terakhir kalinya klien diperbarui manual.
+
+CARA KERJA SETELAH ITU
+1. Versi baru diletakkan di subfolder "update" pada folder aplikasi komputer
+   utama (oleh Claude, langsung dari percakapan).
+2. Komputer utama memeriksa folder update setiap 15 detik. Bilah kuning muncul:
+   "Pembaruan vX siap". Jika aplikasi utama tidak dipakai selama 1 menit
+   (tanpa mouse/keyboard, tidak ada jendela Perbesar atau transfer file),
+   hitung mundur 30 detik dimulai lalu aplikasi mulai ulang sendiri.
+   - Gerakkan mouse untuk membatalkan hitung mundur.
+   - "Mulai ulang sekarang" memasang langsung; "Tunda 30 menit" menunda.
+   - Setelah mulai ulang: kode koneksi dan klien yang tadi online tersambung
+     kembali sendiri. Bilah hijau "Berhasil diperbarui" tampil sebentar.
+   - Jika aplikasi utama sedang tertutup, pembaruan dipasang saat dibuka.
+3. Saat utama terhubung ke klien yang versinya lebih lama, utama mengirim
+   versinya sendiri melalui koneksi terenkripsi. Klien memeriksa file
+   (lengkap, aplikasi LAN Control, versi lebih baru), lalu mulai ulang sendiri
+   dalam mode yang sama (startup otomatis/admin/biasa). Kode yang diketik di
+   klien disimpan sementara terenkripsi DPAPI dan langsung dihapus setelah
+   dipakai. Utama menyambung ulang otomatis, bahkan jika "Sambung ulang
+   otomatis" dimatikan. Kartu klien menampilkan persen pengiriman.
+   - Matikan "Perbarui klien otomatis" di komputer utama untuk menonaktifkan.
+   - Setiap klien hanya dicoba sekali per versi; jika gagal, kartu memberi tahu.
+
+KEAMANAN
+- Tidak memakai internet, GitHub, atau akun. Pembaruan klien hanya bisa dikirim
+  oleh komputer yang memiliki kode koneksi (yang memang sudah memiliki kontrol
+  penuh atas klien). Klien menolak versi lebih lama/sama dan file yang rusak.
+- Versi sebelumnya disimpan di update\LAN-Control-5.previous.jar.
+  Untuk kembali: tutup aplikasi lalu jalankan Kembalikan-Versi-Sebelumnya.bat.
+  (Utama yang lebih baru akan memperbarui klien lagi jika "Perbarui klien
+  otomatis" aktif.)
+
+CATATAN TEKNIS
+- Penggantian file dilakukan PowerShell kecil yang menunggu aplikasi tertutup,
+  menyalin cadangan, mengganti JAR, lalu membuka aplikasi lagi. Jendela
+  PowerShell disembunyikan; mungkin terlihat berkedip sekejap.
+- Validasi: semua uji lama lolos; uji baru untuk urutan versi, penolakan JAR
+  terpotong/asing/tanpa versi, folder update, protokol pemasangan di klien,
+  pengiriman dari utama + sambung ulang setelah klien mulai ulang. Skrip
+  penggantian dijalankan dengan PowerShell 7 asli (Linux): menunggu proses,
+  mencadangkan, mengganti, menghapus file update, dan membuka ulang dengan
+  argumen yang sama, termasuk alamat folder berspasi.
+- Belum diuji langsung di Windows. Pemasangan pertama melalui pembaruan
+  otomatis sebaiknya diamati di komputer utama.

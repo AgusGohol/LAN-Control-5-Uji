@@ -1,0 +1,23 @@
+LAN CONTROL 5 v1.12.10 - SATU INSTANCE KLIEN + PEMASANG ADMIN SEKALI KLIK
+
+Setelah mode Administrator aktif, saat PC klien dinyalakan bisa muncul DUA klien
+sekaligus (satu dari tugas Administrator, satu dari startup lama), sehingga
+bentrok port 45851 dan salah satunya "Belum berbagi layar".
+
+Perbaikan:
+- Klien kini memastikan hanya SATU instance berjalan. Saat startup otomatis,
+  bila mode Administrator aktif, instance Administrator-lah yang memakai port;
+  instance non-admin sisa startup lama mundur diam-diam (tanpa kotak error).
+- Instance Administrator otomatis membersihkan pemicu startup non-admin yang
+  tersisa, sehingga login berikutnya hanya membuka satu klien.
+- Startup otomatis tidak lagi menampilkan kotak error "Port sudah dipakai";
+  jendela baru muncul setelah berbagi benar-benar berjalan.
+
+Baru: Pasang-Akses-Admin.bat (cara termudah untuk banyak PC)
+- Klik dua kali -> setujui UAC sekali -> mode Administrator langsung terpasang,
+  TANPA perlu menutup klien yang sedang berjalan atau membuka jendela kedua
+  (memakai kode yang sudah disimpan lewat "Ingat kode"). Lalu nyalakan ulang PC.
+
+Catatan: bila sebuah PC klien masih memunculkan dua klien dari versi sebelumnya,
+cukup nyalakan ulang sekali lagi setelah naik ke v1.12.10 - sisanya terbersihkan
+otomatis dan hanya klien Administrator yang tersisa.

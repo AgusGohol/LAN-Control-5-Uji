@@ -1,0 +1,8 @@
+LAN CONTROL 5 v1.12.3 - PENYEBAB ERROR KLIEN DITAMPILKAN LANGSUNG
+
+- Perbaikan cara menampilkan error (lanjutan v1.12.1/1.12.2). Sekarang setiap
+  perintah Windows dibungkus penangkap error, dan pesan aslinya ditulis
+  sebagai teks biasa - tidak lagi tergantung penguraian CLIXML.
+- Jika "Ingat kode" atau "Buka otomatis" gagal, dialog menyebut pesan Windows
+  yang sebenarnya (mis. "Access is denied"). Jika tetap tanpa pesan, dialog
+  menampilkan kode keluarnya untuk membantu diagnosa.
